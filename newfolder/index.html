@@ -1,0 +1,39 @@
+<html>
+ 
+<head>
+    <title>Dialogs Example</title>
+</head>
+ 
+<body>
+    <h2>Dialog Boxes</h2>
+ 
+    <button id="alertBtn">Show Alert</button>
+    <button id="confirmBtn">Show Confirm</button>
+    <button id="promptBtn">Show Prompt</button>
+ 
+ 
+    <p id="result"></p>
+ 
+    <script>
+        const result = document.getElementById('result');
+ 
+ 
+        document.getElementById('alertBtn').onclick = () => {
+            alert('This is an alert!');
+            result.textContent = 'Alert was shown';
+        };
+ 
+        document.getElementById('confirmBtn').onclick = () => {
+            const confirmed = confirm('Do you confirm?');
+            result.textContent = confirmed ? 'Confirmed!' : 'Cancelled!';
+        };
+ 
+        document.getElementById('promptBtn').onclick = () => {
+            const answer = prompt('Please enter your name:', 'Guest');
+            result.textContent = answer ? `Hello, ${answer}!` : 'Prompt cancelled';
+        };
+ 
+    </script>
+</body>
+ 
+</html>
