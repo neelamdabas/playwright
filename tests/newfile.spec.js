@@ -31,4 +31,5 @@ test('verify the url is open or not', async ({ page }) => {
   await page.locator("#city").click();
   await page.keyboard.type("Delhi");
   await page.keyboard.press("Enter");
+  
 });
